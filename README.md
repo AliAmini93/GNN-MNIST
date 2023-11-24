@@ -3,7 +3,7 @@ Implementing a Graph Neural Network (GNN) for Edge Prediction on MNIST Images
 
 In this implementation, each 28x28 digit image from the MNIST dataset is represented as a graph. Each pixel in the image grid is considered a node, with the node's feature being its pixel intensity, normalized within the range [0, 1].
 
-Contrasting with a related notebook, [gnn-mnist.ipyb], where pixel connectivity in the adjacency matrix was determined by neighborhood pixels using a Gaussian filter based on Euclidean distance, this notebook introduces a novel approach. Here, we predict the edges of the graph through a dedicated subnetwork within the GNN model:
+Contrasting with a related notebook, gnn-mnist.ipyb(https://github.com/AliAmini93/GNN-MNIST/blob/main/gnn-mnist.ipynb), where pixel connectivity in the adjacency matrix was determined by neighborhood pixels using a Gaussian filter based on Euclidean distance, this notebook introduces a novel approach. Here, we predict the edges of the graph through a dedicated subnetwork within the GNN model:
 
 ```python
 self.edge_predictor = nn.Sequential(nn.Linear(features_coord, 32),  # coord to hidden
