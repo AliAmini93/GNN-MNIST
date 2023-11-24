@@ -6,10 +6,10 @@ In this implementation, each 28x28 digit image from the MNIST dataset is represe
 Contrasting with a related notebook, [gnn-mnist.ipyb], where pixel connectivity in the adjacency matrix was determined by neighborhood pixels using a Gaussian filter based on Euclidean distance, this notebook introduces a novel approach. Here, we predict the edges of the graph through a dedicated subnetwork within the GNN model:
 
 ```python
-        self.edge_predictor = nn.Sequential(nn.Linear(features_coord, 32),  # coord to hidden
-                                        nn.ReLU(),
-                                        nn.Linear(32, 1),  # hidden to edge
-                                        nn.Tanh())
+self.edge_predictor = nn.Sequential(nn.Linear(features_coord, 32),  # coord to hidden
+                                nn.ReLU(),
+                                nn.Linear(32, 1),  # hidden to edge
+                                nn.Tanh())
 
 ```
 
