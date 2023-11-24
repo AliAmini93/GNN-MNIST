@@ -17,4 +17,4 @@ The resulting adjacency matrix, denoted as $A$, is crucial for computing the out
 
 $$X^{(l+1)}=A X^{(l)} W^{(l)}.$$
 
-In this formula, $A$ is the $N \times N$ adjacency matrix, and $X$ is the $N \times C$ feature matrix representing a 2D coordinate array. Here, $N$  equals the total number of pixels in an MNIST image, -- $28 \times 28 = 784$. $W$ is the weight matrix with dimensions $N \times P$, where $P$ corresponds to the number of classes, especially relevant in the context of a single hidden layer architecture.
+In this formula, $A$ is the $N \times N$ adjacency matrix, and $X$ is the $N \times C$ feature matrix representing a 2D coordinate array. Here, $N$  equals the total number of pixels in an MNIST image, $28 \times 28 = 784$. $W$ is the weight matrix with dimensions $N \times P$, where $P$ corresponds to the number of classes, especially relevant in the context of a single hidden layer architecture.
